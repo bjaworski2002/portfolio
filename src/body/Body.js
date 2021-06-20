@@ -1,36 +1,29 @@
-import ReactDOM from 'react-dom'
-import React, { useRef, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import React, {useRef} from "react";
+import {Canvas, useFrame} from "@react-three/fiber";
+import styles from "./Body.module.css"
 
-export default function Box(props) {
-    // This reference will give us direct access to the THREE.Mesh object
-    const mesh = useRef()
-    // Set up state for the hovered and active state
-    const [hovered, setHover] = useState(false)
-    const [active, setActive] = useState(false)
-    // Subscribe this component to the render-loop, rotate the mesh every frame
-    useFrame((state, delta) => (mesh.current.rotation.x += 0.01))
-    // Return the view, these are regular Threejs elements expressed in JSX
-    return (
-        <mesh
-            {...props}
-            ref={mesh}
-            scale={active ? 1.5 : 1}
-            onClick={(event) => setActive(!active)}
-            onPointerOver={(event) => setHover(true)}
-            onPointerOut={(event) => setHover(false)}>
-            <boxGeometry args={[1, 1, 1]} />
-            <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
+const Box = () => {
+    const mesh = useRef(null)
+    useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01))
+    return(
+        <mesh ref={mesh}>
+            <boxBufferGeometry attach='geometry' args={[1, 1, 1]} />
+            <meshStandardMaterial attach='material'/>
         </mesh>
     )
 }
-
-ReactDOM.render(
-    <Canvas>
-        <ambientLight />
-        <pointLight position={[10, 10, 10]} />
-        <Box position={[-1.2, 0, 0]} />
-        <Box position={[1.2, 0, 0]} />
-    </Canvas>,
-    document.getElementById('root'),
-)
+export default function Body(){
+    return(
+        <div className={styles.Body}>
+            <div className={styles.Text}>
+                <h1 className={"text-6xl p-3 pt-12 font-bold"}>Bartosz Jaworski</h1>
+                <h2 className={"text-xl p-3 pt-0"}>Site under construction!</h2>
+            </div>
+            <div className={styles.Canvas}>
+                <Canvas>
+                    <Box />
+                </Canvas>
+            </div>
+        </div>
+    )
+}

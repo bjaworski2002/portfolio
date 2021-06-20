@@ -1,0 +1,21 @@
+.Body{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+}
+.Text{
+
+  height: auto;
+  min-width: 320px;
+  margin: min(5%, 40px);
+  display: flex;
+  flex-direction: column;
+
+}
+.Canvas{
+  width: 40%;
+  min-width: 400px;
+}

@@ -4,9 +4,13 @@ import Dropdown from "./Dropdown"
 function Header(){
     return(
         <React.Fragment>
-            <header className="absolute left-0 top-0 h-auto w-full bg-black text-white flex justify-between flex-wrap">
+            <header className="h-auto w-screen bg-black text-white flex justify-between flex-wrap">
                 <div className="p-2 px-4 text-lg font-bold">Bartosz Jaworski</div>
-                <Dropdown />
+                <div>
+                    <a href={"https://www.linkedin.com/in/jaworskib/"} className={"px-2"}>LinkedIn</a>
+                    <a href={"https://github.com/bjaworski2002"} className={"px-2"}>GitHub</a>
+                    <Dropdown />
+                </div>
             </header>
         </React.Fragment>
     )

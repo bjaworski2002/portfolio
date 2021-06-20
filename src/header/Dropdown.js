@@ -8,7 +8,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Dropdown() {
     return (
         <Menu as="div" className="p-1 px-4 relative inline-block text-left">
             {({ open }) => (
@@ -38,7 +38,7 @@ export default function Example() {
                                 <Menu.Item>
                                     {({ active }) => (
                                         <a
-                                            href="#"
+                                            href="https://drive.google.com/file/d/1Dxj8xqDonioH435dqYOPyZ-McMUtyoSy/view?usp=sharing"
                                             className={classNames(
                                                 active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                                 'block px-4 py-2 text-sm'
@@ -51,7 +51,7 @@ export default function Example() {
                                 <Menu.Item>
                                     {({ active }) => (
                                         <a
-                                            href="#"
+                                            href="https://drive.google.com/file/d/1rJAinJ-dpAGyquRx7w6BiDftSZ4466EG/view?usp=sharing"
                                             className={classNames(
                                                 active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                                 'block px-4 py-2 text-sm'
