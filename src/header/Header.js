@@ -1,6 +1,5 @@
 import React from "react";
 import Dropdown from "./Dropdown"
-import styles from "./Header.module.css"
 
 function Header(){
     return(
