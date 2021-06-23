@@ -17,7 +17,7 @@ export default function Body(){
         <div className={styles.Body}>
             <div className={styles.Text}>
                 <h1 className={"text-6xl p-3 pt-12 font-bold"}>Bartosz Jaworski</h1>
-                <h2 className={"text-xl p-3 pt-0"}>Site under construction!</h2>
+                <h2 className={"text-xl p-3 pt-0"}>Hi! I'm an 18 years old programming passionate. Feel free to explore my projects! Select one below. You can also see my CV in upper right corner.</h2>
             </div>
             <div className={styles.Canvas}>
                 <Canvas>

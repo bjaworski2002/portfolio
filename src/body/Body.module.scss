@@ -7,13 +7,13 @@
 
 }
 .Text{
-
+  position: relative;
   height: auto;
+  width: 50%;
   min-width: 320px;
-  margin: min(5%, 40px);
+  margin-left: min(5%, 40px);
   display: flex;
   flex-direction: column;
-
 }
 .Canvas{
   width: 40%;
